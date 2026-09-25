@@ -1,16 +1,12 @@
+![Julio Cesar — desenvolvimento full stack. Painel animado com interface, API e dados.](assets/cabecalho.svg)
+
 <div align="center">
 
-# Julio Cesar
+**[Explorar projetos](https://github.com/DEV-Julio-Cesar?tab=repositories) · [ERP para padarias](https://github.com/DEV-Julio-Cesar/Padaria-em-teste-python-java) · [Gestão de contatos](https://github.com/DEV-Julio-Cesar/Desafio-Dev-Julio-Cesar)**
 
-### Desenvolvimento Full Stack · Aplicações web · Sistemas de gestão
-
-Projetos que conectam interfaces, APIs e bancos de dados para resolver necessidades do dia a dia.
-
-[Explorar projetos](https://github.com/DEV-Julio-Cesar?tab=repositories) · [ERP para padarias](https://github.com/DEV-Julio-Cesar/Padaria-em-teste-python-java) · [Gestão de contatos](https://github.com/DEV-Julio-Cesar/Desafio-Dev-Julio-Cesar)
+`TypeScript` · `React` · `Node.js` · `C#` · `.NET` · `SQL`
 
 </div>
-
----
 
 ## Olá, eu sou o Julio 👋
 
