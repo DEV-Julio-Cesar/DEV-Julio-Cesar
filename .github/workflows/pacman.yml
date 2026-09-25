@@ -25,6 +25,75 @@ jobs:
           github_user_name: DEV-Julio-Cesar
           games: pacman
           hide_month_labels: 'true'
+      - name: Trocar blocos por ícones das tecnologias
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          from copy import deepcopy
+          from urllib.request import urlopen, Request
+          import xml.etree.ElementTree as ET
+          
+          NS = 'http://www.w3.org/2000/svg'
+          ET.register_namespace('', NS)
+          def tag(name):
+              return '{' + NS + '}' + name
+          base = 'https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/'
+          icons = ['javascript', 'typescript', 'csharp', 'html5', 'css3']
+          def download(path):
+              with urlopen(Request(base + path, headers={'User-Agent': 'perfil-julio-cesar'}), timeout=30) as response:
+                  return response.read()
+          logos = {name: ET.fromstring(download('icons/' + name + '/' + name + '-original.svg')) for name in icons}
+          license_dir = Path('assets/pacman')
+          license_dir.mkdir(parents=True, exist_ok=True)
+          (license_dir / 'LICENCA-ICONES.txt').write_bytes(download('LICENSE'))
+          for path in Path('dist').glob('pacman-contribution-graph*.svg'):
+              tree = ET.parse(path)
+              root = tree.getroot()
+              cells = [el for el in root.findall(tag('rect')) if el.get('id', '').startswith('c-')]
+              assert cells, 'Grade de contribuicoes nao encontrada'
+              empty = Counter(el.get('fill') for el in cells if el.find(tag('animate')) is None).most_common(1)[0][0]
+              preserved = {el.get('id'): ET.tostring(el) for el in root if el.get('id', '').startswith(('pacman', 'ghost', 'wh-', 'wv-'))}
+              defs = ET.Element(tag('defs'))
+              for name, logo in logos.items():
+                  symbol = ET.SubElement(defs, tag('symbol'), {'id': 'icone-' + name, 'viewBox': logo.get('viewBox', '0 0 128 128')})
+                  for child in logo:
+                      symbol.append(deepcopy(child))
+              root.insert(0, defs)
+              count = 0
+              for cell in cells:
+                  anim = cell.find(tag('animate'))
+                  colors = anim.get('values').split(';') if anim is not None else [cell.get('fill')]
+                  if all(color == empty for color in colors):
+                      continue
+                  name = icons[count % len(icons)]
+                  cell.set('fill', empty)
+                  if anim is not None:
+                      cell.remove(anim)
+                  icon = ET.Element(tag('use'), {
+                      'href': '#icone-' + name,
+                      'x': cell.get('x'), 'y': cell.get('y'),
+                      'width': cell.get('width'), 'height': cell.get('height'),
+                      'opacity': '0' if colors[0] == empty else '1',
+                      'data-tecnologia': name
+                  })
+                  if anim is not None:
+                      opacity = deepcopy(anim)
+                      opacity.set('attributeName', 'opacity')
+                      opacity.set('values', ';'.join('0' if color == empty else '1' for color in colors))
+                      icon.append(opacity)
+                  root.insert(list(root).index(cell) + 1, icon)
+                  count += 1
+              for el in root:
+                  if el.get('id') in preserved:
+                      assert ET.tostring(el) == preserved[el.get('id')], 'Animacao original alterada'
+              assert count > 0, 'Nenhum icone foi inserido'
+              root.set('viewBox', '0 0 ' + root.get('width') + ' ' + root.get('height'))
+              tree.write(path, encoding='utf-8', xml_declaration=True)
+              ET.parse(path)
+              print(str(path) + ': ' + str(count) + ' icones; movimentos e tempos preservados')
+          
+          PY
       - name: Publicar versões clara e escura
         run: |
           mkdir -p assets/pacman
