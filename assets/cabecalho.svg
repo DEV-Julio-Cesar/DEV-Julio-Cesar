@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">Julio Cesar — desenvolvimento que conecta</title><desc id="desc">Painel animado azul e verde com interface, API e dados. Ilustração do fluxo de uma aplicação, sem métricas de atividade.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07101f"/><stop offset="1" stop-color="#101b2d"/></linearGradient><linearGradient id="accent"><stop stop-color="#42e8c4"/><stop offset="1" stop-color="#6495ff"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#8ba3c4" stroke-opacity=".07"/></pattern></defs>
+<style>.pulse{animation:pulse 4s ease-in-out infinite}.flow{stroke-dasharray:10 18;animation:flow 5s linear infinite}.cursor{animation:blink 1.5s steps(2,start) infinite}@keyframes pulse{50%{opacity:.35}}@keyframes flow{to{stroke-dashoffset:-168}}@keyframes blink{to{opacity:0}}@media(prefers-reduced-motion:reduce){.pulse,.flow,.cursor{animation:none}}</style>
+<rect width="1200" height="520" rx="24" fill="url(#bg)"/><rect width="1200" height="520" rx="24" fill="url(#grid)"/><rect x="1" y="1" width="1198" height="518" rx="23" fill="none" stroke="#2b4058"/>
+<path d="M32 1H1168" stroke="url(#accent)" stroke-width="3"/>
+<g font-family="Segoe UI,Arial,sans-serif"><circle cx="44" cy="35" r="5" fill="#42e8c4"/><circle cx="64" cy="35" r="5" fill="#6495ff"/><circle cx="84" cy="35" r="5" fill="#34475f"/><text x="110" y="40" fill="#8fa5c1" font-family="monospace" font-size="13">julio@dev / portfólio</text><text x="1154" y="40" text-anchor="end" fill="#8fa5c1" font-size="12" letter-spacing="2">CÓDIGO · CONEXÕES · SOLUÇÕES</text>
+<path d="M32 60H1168" stroke="#263750"/>
+<text x="48" y="112" fill="#42e8c4" font-size="13" letter-spacing="4">DESENVOLVIMENTO FULL STACK</text>
+<text x="43" y="187" fill="#f0f6ff" font-weight="700" font-size="72" letter-spacing="-3">Julio Cesar<tspan fill="#42e8c4">.</tspan></text>
+<text x="48" y="226" fill="#b9cae0" font-size="22">Da interface aos dados. Cada conexão importa.</text>
+<text x="48" y="268" fill="#91a7c4" font-family="monospace" font-size="15">&gt; Aplicações web e sistemas de gestão</text><rect class="cursor" x="431" y="252" width="9" height="20" fill="#42e8c4"/>
+<g transform="translate(898 103)"><rect width="246" height="156" rx="15" fill="#0b1728" stroke="#344b66"/><text x="24" y="38" fill="#68849f" font-family="monospace" font-size="13">// construir e conectar</text><text x="24" y="94" fill="#42e8c4" font-size="50" font-family="monospace" font-weight="bold">&lt;JC /&gt;</text><path d="M24 123H220" stroke="url(#accent)" stroke-width="3" class="pulse"/></g>
+<path d="M48 307H1152" stroke="#263750"/>
+<text x="48" y="337" fill="#7892b1" font-size="11" letter-spacing="3">DA EXPERIÊNCIA À PERSISTÊNCIA</text>
+<path d="M360 403H441M758 403H839" stroke="#314963" stroke-width="2"/><path class="flow" d="M360 403H441M758 403H839" stroke="#42e8c4" stroke-width="3"/>
+<g><rect x="48" y="361" width="312" height="90" rx="12" fill="#0b1728" stroke="#34516c"/><text x="70" y="390" fill="#42e8c4" font-size="11" letter-spacing="2">01 / INTERFACE</text><text x="70" y="425" fill="#e4edfc" font-size="22" font-weight="600">React · Angular</text></g>
+<g><rect x="443" y="361" width="312" height="90" rx="12" fill="#0b1728" stroke="#34516c"/><text x="465" y="390" fill="#6ba4ff" font-size="11" letter-spacing="2">02 / API</text><text x="465" y="425" fill="#e4edfc" font-size="22" font-weight="600">Node.js · C# / .NET</text></g>
+<g><rect x="840" y="361" width="312" height="90" rx="12" fill="#0b1728" stroke="#34516c"/><text x="862" y="390" fill="#42e8c4" font-size="11" letter-spacing="2">03 / DADOS</text><text x="862" y="425" fill="#e4edfc" font-size="22" font-weight="600">PostgreSQL · SQL Server</text></g>
+<text x="48" y="488" fill="#7892b1" font-size="12">DEV-JULIO-CESAR</text><text x="1152" y="488" text-anchor="end" fill="#7892b1" font-size="12">Explore os projetos. Conheça o código.</text></g></svg>
