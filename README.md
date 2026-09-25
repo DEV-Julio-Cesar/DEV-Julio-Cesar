@@ -52,3 +52,16 @@ Aplicação full stack para cadastro e consulta de contatos, com filtros, pagina
 **Explore os repositórios para conhecer o código, as tecnologias e as instruções de cada projeto.**
 
 </div>
+
+
+## 👾 Minhas contribuições em modo arcade
+
+Cada bloco faz parte da minha jornada no código. Aqui, ela ganha uma versão animada com Pac-Man e fantasmas.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DEV-Julio-Cesar/DEV-Julio-Cesar/main/assets/pacman/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DEV-Julio-Cesar/DEV-Julio-Cesar/main/assets/pacman/pacman-contribution-graph.svg">
+  <img alt="Pac-Man percorrendo meu calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/DEV-Julio-Cesar/DEV-Julio-Cesar/main/assets/pacman/pacman-contribution-graph-dark.svg" width="100%">
+</picture>
+
+<sub>Animação atualizada diariamente com minhas contribuições públicas · Criada com [Pac-Man Contribution Graph](https://github.com/abozanona/pacman-contribution-graph).</sub>
