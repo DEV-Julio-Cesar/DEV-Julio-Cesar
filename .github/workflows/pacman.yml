@@ -1,0 +1,41 @@
+name: Atualizar Pac-Man das contribuições
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 9 * * *'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/pacman.yml']
+permissions:
+  contents: write
+concurrency:
+  group: pacman-do-perfil
+  cancel-in-progress: false
+jobs:
+  animacao:
+    name: Gerar e publicar animação
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Obter arquivos do perfil
+        uses: actions/checkout@v4
+      - name: Gerar Pac-Man com contribuições reais
+        uses: abozanona/pacman-contribution-graph@7332e1de7903ab780c3692a4127a59cc13872daa
+        with:
+          github_user_name: DEV-Julio-Cesar
+          games: pacman
+          hide_month_labels: 'true'
+      - name: Publicar versões clara e escura
+        run: |
+          mkdir -p assets/pacman
+          cp dist/pacman-contribution-graph.svg assets/pacman/
+          cp dist/pacman-contribution-graph-dark.svg assets/pacman/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/pacman
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "visual: atualiza Pac-Man das contribuições"
+          git pull --rebase origin main
+          git push origin HEAD:main
