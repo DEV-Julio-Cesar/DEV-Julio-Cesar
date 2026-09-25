@@ -1,16 +1,58 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**DEV-Julio-Cesar/DEV-Julio-Cesar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Julio Cesar
 
-Here are some ideas to get you started:
+### Desenvolvimento Full Stack · Aplicações web · Sistemas de gestão
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Projetos que conectam interfaces, APIs e bancos de dados para resolver necessidades do dia a dia.
+
+[Explorar projetos](https://github.com/DEV-Julio-Cesar?tab=repositories) · [ERP para padarias](https://github.com/DEV-Julio-Cesar/Padaria-em-teste-python-java) · [Gestão de contatos](https://github.com/DEV-Julio-Cesar/Desafio-Dev-Julio-Cesar)
+
+</div>
+
+---
+
+## Olá, eu sou o Julio 👋
+
+Meu portfólio reúne aplicações web, sistemas de gestão e atividades de desenvolvimento. Aqui compartilho projetos que integram frontend, backend e persistência de dados, com experiências nos ecossistemas JavaScript/TypeScript e C#/.NET.
+
+## Projetos em destaque
+
+### 🥖 ERP para padarias
+
+Sistema de gestão e frente de caixa com módulos de vendas, estoque, compras, produção e relatórios. A documentação também apresenta controle de acesso, auditoria e continuidade da operação sem internet.
+
+**Tecnologias:** React · TypeScript · Node.js · Express · Prisma · PostgreSQL
+
+[Ver projeto e documentação →](https://github.com/DEV-Julio-Cesar/Padaria-em-teste-python-java)
+
+### 📇 Gestão de contatos
+
+Aplicação full stack para cadastro e consulta de contatos, com filtros, paginação e operações de criação, edição e exclusão. Integra uma interface Angular a uma API ASP.NET Core e ao SQL Server.
+
+**Tecnologias:** C# · ASP.NET Core · Angular · SQL Server · ADO.NET
+
+[Ver projeto e instruções de execução →](https://github.com/DEV-Julio-Cesar/Desafio-Dev-Julio-Cesar)
+
+## Tecnologias presentes nos projetos
+
+| Área | Tecnologias |
+| --- | --- |
+| Frontend | React, Angular, TypeScript, JavaScript e HTML |
+| Backend | Node.js, Express, C# e ASP.NET Core |
+| Dados | PostgreSQL, SQL Server, Prisma e ADO.NET |
+| Ferramentas e execução | Git, GitHub, Vite e Docker Compose |
+
+## Outros trabalhos
+
+- [Sistema de Treinamento Inclusivo](https://github.com/DEV-Julio-Cesar/Sistema-de-Treinamento)
+- [Atividades e Projetos UC9](https://github.com/DEV-Julio-Cesar/Atividades-e-Projetos-UC9)
+- [Todos os repositórios](https://github.com/DEV-Julio-Cesar?tab=repositories)
+
+---
+
+<div align="center">
+
+**Explore os repositórios para conhecer o código, as tecnologias e as instruções de cada projeto.**
+
+</div>
